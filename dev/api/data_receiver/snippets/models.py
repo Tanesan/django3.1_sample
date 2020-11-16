@@ -1,12 +1,11 @@
 from django.db import models
 
 
-class IOT(models.Model):
+class HomeMonitoringIot(models.Model):
     datatype = models.CharField(max_length=20)
-    pub_date = models.DateTimeField('date published')
-    quantity = models.IntegerField(default=0)
+    pub_date = models.DateTimeField()
+    quantity = models.IntegerField()
 
-    def __str__(self):
-        return f"{self.datatype} at {self.pub_date}"
-    
-    
+    class Meta:
+        managed = False
+        db_table = 'home_monitoring_iot'

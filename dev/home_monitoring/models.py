@@ -14,7 +14,7 @@ class IOT(models.Model):
 from django.utils import timezone
 current_year = timezone.now()
 obj = IOT()
-obj.datatype = "curtain"
+obj.datatype = "curtain"/ "shower_use" / "defecation"
 obj.pub_date = current_year
 obj.quantity = 1
 obj.save()
