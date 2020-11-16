@@ -5,7 +5,7 @@
 - root/rootでとりあえず開発中
 
 > templates
-    - [ ] login後、custom pageに飛ぶ様に開発
+    - [x] login後、custom pageに飛ぶ様に開発
     - [ ] custom pageでデータをSSRし、jinjaで開発してもらえる様にする。
 
 

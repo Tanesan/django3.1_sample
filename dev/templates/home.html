@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 {% block title %}Home{% endblock %}
 
 {% block content %}
@@ -10,4 +11,8 @@
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
+
+<!-- ここにデータを表示できる様にする。 -->
+
+
 {% endblock %}
