@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/sample.js' %}"></script>
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
@@ -13,6 +14,7 @@
 {% endif %}
 
 <!-- ここにデータを表示できる様にする。 -->
+<div id="myDiv"></div>
 
 
 {% endblock %}

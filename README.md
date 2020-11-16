@@ -6,7 +6,7 @@
 
 > templates
     - [x] login後、custom pageに飛ぶ様に開発
-    - [ ] custom pageでデータをSSRし、jinjaで開発してもらえる様にする。
+    - [o] custom pageでデータをSSRし、jinjaで開発してもらえる様にする。
 
 
 - Deploy
