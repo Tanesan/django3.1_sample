@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ViewBioConfig(AppConfig):
+class Home_monitoring_Config(AppConfig):
     name = 'home_monitoring'
