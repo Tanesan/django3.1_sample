@@ -12,6 +12,8 @@
 
 - development
     - data送信API実装
+    - https://www.django-rest-framework.org/tutorial/1-serialization/
+    - 次はここから
 
 - Deploy (11/18に実装予定)
     - [ ] HEROKU上でdocker起動できる様にする
