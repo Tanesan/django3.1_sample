@@ -8,5 +8,15 @@ class IOT(models.Model):
 
     def __str__(self):
         return f"{self.datatype} at {self.pub_date}"
-    
+
+
+"""
+from django.utils import timezone
+current_year = timezone.now()
+obj = IOT()
+obj.datatype = "curtain"
+obj.pub_date = current_year
+obj.quantity = 1
+obj.save()
+"""
     
