@@ -18,4 +18,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('receive_censor_data/', include('receive_censor_data.urls')),
 ]
