@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from receive_censor_data.models import HomeMonitoringIot
 from django.utils import timezone
 
@@ -8,7 +9,7 @@ class IoTSerializer(serializers.Serializer):
     datatype = serializers.CharField(required=False, allow_blank=True, max_length=20)
     quantity = serializers.IntegerField(default=0)
     user_name = serializers.CharField(max_length=50)
-    pub_date = timezone.now()
+    pub_date = serializers.DateTimeField()
 
     def create(self, validated_data):
         """
@@ -19,6 +20,7 @@ class IoTSerializer(serializers.Serializer):
 
     # def update(self, instance, validated_data):
     #     """
+
     #     Update and return an existing `Snippet` instance, given the validated data.
     #     """
     #     instance.title = validated_data.get('title', instance.title)
