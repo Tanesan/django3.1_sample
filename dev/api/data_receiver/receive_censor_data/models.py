@@ -7,7 +7,7 @@ class HomeMonitoringIot(models.Model):
     pub_date = models.DateTimeField()
     quantity = models.IntegerField()
     # 今後：{id: line UUID}で管理する？
-    user_name = models.CharField(max_length=50)
+    user_name = models.CharField(max_length=20, default="")
 
 
     class Meta:
