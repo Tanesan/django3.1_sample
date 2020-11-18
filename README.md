@@ -4,7 +4,8 @@
 
 - root/rootでとりあえず開発中
 
-> templates
+
+- templates
     - [x] login後、custom pageに飛ぶ様に開発
     - [o] custom pageでデータをSSRし、jinjaで開発してもらえる様にする。
         - サクッと出来そう。
@@ -32,4 +33,5 @@
 - docker compose でdebugできる。 
     - `docker-compose run web python manage.py makemigrations home_monitoring`
     - `docker-compose run << CONTAINER_NAME >> command`
+    - micro service architecture開発が捗る
 
