@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 
-from home_monitoring.models import IoT
+from home_monitoring.models import IOT
 from home_monitoring.serializers import IoTSerializer
 
 def index(request):
@@ -25,6 +25,7 @@ def send(request):
     # PUT
 
     if request.method == 'PUT':
+
         data = JSONParser().parse(request)
         serializer = IoTSerializer(data=data)
         print("■■■■■■■■■■■■■■■■■■■■■■■■■", data)
