@@ -8,7 +8,7 @@ class IOT(models.Model):
     # 
     pub_date = models.DateTimeField('date published')
     
-    # "haisetu"が小なのか大なのか
+    # "excretion"が小なのか大なのか
     #  "curtain": 0/1
     quantity = models.IntegerField(default=0)
 
