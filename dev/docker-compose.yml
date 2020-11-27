@@ -7,17 +7,20 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
+
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     environment:
       # DATABASE_URL="postgres://username:password@hostname:5432/database"
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
-
+    stdin_open: true
+    tty: true
     depends_on:
       - db
   # api:
@@ -29,3 +32,4 @@ services:
   #     - "9009:9009"
   #   depends_on:
   #     - db
+

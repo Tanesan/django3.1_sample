@@ -30,7 +30,9 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    # accountsはどうするんだっけ
     'home_monitoring.apps.Home_monitoring_Config',
+    'accounts.apps.Account_Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -97,6 +99,10 @@ DATABASES = {
 }
 
 
+AUTHENTICATION_BACKENDS = [
+    #  'django.contrib.auth.backends.ModelBackend',
+     'accounts.backends.EmailAuthBackend',    
+]
 
 
 # Password validation

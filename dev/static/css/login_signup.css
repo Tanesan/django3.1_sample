@@ -1,0 +1,44 @@
+.login_image {
+    width: auto;
+    height: 100%;
+}
+
+.login_box {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #000000;
+    /*文字色*/
+    background: #FFF;
+    border: solid 1px #707070;
+    border-radius: 8px;
+    /*線*/
+    border-radius: 10px;
+    /*角の丸み*/
+}
+
+.login_box p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 60px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mdl-textfield {
+    width: 100%!important;
+}

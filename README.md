@@ -89,3 +89,7 @@ add-onsを利用する。heroku config に DATABASE_URLが追加される
 
 
 
+##  docker で web appをdebugする方法
+
+tty:true, stdin:true,とdocker attach
+
