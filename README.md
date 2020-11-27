@@ -86,10 +86,20 @@ add-onsを利用する。heroku config に DATABASE_URLが追加される
 
 
 
+発表間近
 
-
+---
 
 ##  docker で web appをdebugする方法
 
-tty:true, stdin:true,とdocker attach
+tty:true, stdin_open:true,と設定し、docker attach <containerID>を起動後に実行する。
 
+## 11/27あと何やるか？logout機能実装と、plotly実装。
+
+- url.pyの path（）引数のname='shower'は,jinja2で利用する。
+
+- Dashboard -> showerの繊維はできるけど、shower→curttainはできない。component再利用したい。
+
+- login userの情報がいずれにせよ必要なので、login_requiredを先に実装する？
+    - 一回デモデータを描画することを優先する。
+    

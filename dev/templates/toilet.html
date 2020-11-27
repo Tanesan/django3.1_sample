@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    {% load static %}
 
 <head>
     <meta charset="utf-8" />
@@ -14,6 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/logout.js' %}"></script>
+    
 </head>
 <style>
     .tab_No_checked:hover {
@@ -247,7 +252,10 @@
                     </div>
                 </div>
 
-
+            <div>
+                <div id="visualization_input" hidden>{{ plot_div }}</div>
+                <div id="area-to-visualize" style="margin: 20px;"></div>
+            </div>
 
 
 
@@ -259,3 +267,4 @@
         </main>
     </div>
 </body>
+<script type="text/javascript" src="{% static 'js/iot-plotly.js' %}"></script>

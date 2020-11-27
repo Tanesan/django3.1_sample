@@ -10,8 +10,8 @@ def authentificate_user(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            if username == 'user1' and password == 'secret':
-                return HttpResponseRedirect('/home_monitoring/')
+            if username == 'root' and password == 'root':
+                return HttpResponseRedirect('/home_monitoring/dashboard/')
             else:
                 return render(
                     request,
