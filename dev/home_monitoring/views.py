@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.utils import timezone
 
 from django.views.decorators.csrf import csrf_exempt
@@ -10,7 +10,9 @@ from home_monitoring.models import IOT
 from home_monitoring.serializers import IoTSerializer
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    
+    return render(request, 
+    'dashboard.html', {})
 
 
 @csrf_exempt

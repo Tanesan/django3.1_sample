@@ -23,7 +23,9 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')
     # include('django.contrib.auth.urls')
     ),
-        # registration/login.htmlを利用する。
+    # registration/login.htmlを利用する。
+
+    path('logout/', TemplateView.as_view(template_name='registration/login.html'), name='home'), # new
     path('', TemplateView.as_view(template_name='registration/login.html'), name='home'), # new
     path('signup/', TemplateView.as_view(template_name='registration/signup.html'), name='signup')
 ]

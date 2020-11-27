@@ -1,6 +1,6 @@
 # from django.contrib.auth.forms import AuthenticationForm
 from .forms import LoginForm
-
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 def authentificate_user(request):
