@@ -1,10 +1,5 @@
 <!-- templates/registration/login.html -->
-{% extends 'base.html' %}
-{% load static %}
-{% load widget_tweaks %}
-
-{% block title %}Login{% endblock %}
-{% block head %}
+{% extends 'base.html' %} {% load static %} {% load widget_tweaks %} {% block title %}Login{% endblock %} {% block head %}
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/login_signup.css' %}">
-{% endblock %}
-
-{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login_signup.css' %}"> {% endblock %} {% block content %}
 <!-- <h2>Log In</h2>
 <form method="post">
   {% csrf_token %}
@@ -37,15 +29,23 @@
     <h2>Login</h2>
     <p class="mt-4">If you don’t have an account, you can <a href="signup">Sign up</a>.</p>
     <form method="post">
-      {% csrf_token %}
+        {% csrf_token %}
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            {{form.username|add_class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label"}}
+            <label class="mdl-textfield__label" for="mail">MailAdress</label>
+            <span class="mdl-textfield__error">Please enter your email</span>
+        </div>
 
-      {{form.username|add_class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label"}}
-      {{form.password|add_class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label"}}
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            {{form.password|add_class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label"}}
+            <label class="mdl-textfield__label" for="pass">Password</label>
+            <span class="mdl-textfield__error">半角英数字記号をそれぞれ1種類含む8文字以上100文字以下です。</span>
+        </div>
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="margin-left: 83%;">
             Login
           </button>
 
     </form>
-    
-{% endblock %}
+
+    {% endblock %}
